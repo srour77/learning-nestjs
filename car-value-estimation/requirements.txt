@@ -1,0 +1,32 @@
+- description: An app to estimate how much a car worth in dollars
+
+- requirements:
+    - a user should be able to login/signup
+    - a user should be able to submit his car info and get an estimatation of the car value
+    - a user should be able to report for how much he sold the car
+    - an admin should be able to review the user submission, and decides whether it's valid or not
+
+- user cases:
+    - signup:
+        - a user enters his email and password
+        - if the email aleady exits
+            - return an error message
+        - persists the user data
+        - a token/sessionId returned to the client to use it in the future requests
+
+    - login:
+        - a user enters his email and password
+        - if the email doesn't exit or if the password doesn't match
+            - return an error message
+        - a token/sessionId returned to the client to use it in the future requests
+
+
+    - get an estimatation:
+        - a user signs in to the system
+        - a user submits his car info (make, model, year, mileage)
+        - a user gets a value estimatation of his car
+
+    - reports the actual value of the car:
+        - a user signs in the system
+        - a user submits his car info along with the actual price he sold the car for
+        - an admin reviews the user submission, and decides if it's valid or not
